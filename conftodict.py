@@ -126,7 +126,7 @@ class ConfToDict(object):
 
                 # Find end of banner
                 sentinel = banner_start + 1
-                while not self.config[sentinel] == terminator:
+                while not self.config[sentinel][-2:] == terminator::
                     sentinel += 1
 
                 # Add start/finish of banner to banners list
